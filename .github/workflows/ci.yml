@@ -16,7 +16,8 @@ jobs:
           POSTGRES_USERNAME: root
           POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank_test
-          POSTGRES_PORT: 5431
+        ports:
+          - 5431:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
